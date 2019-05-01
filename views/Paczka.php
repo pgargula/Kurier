@@ -1,10 +1,14 @@
-﻿<!DOCTYPE html>
-<html lang="pl" dir="ltr">
+﻿<?php 
+include'../session.php';
+?>
+
+<html lang="pl" dir="ltr"  action="../session.php">
+
   <head>
     <meta charset="utf-8">
     <title>KURIER4G</title>
     <script type="text/javascript" href="paczka.js"></script>
-    <link rel="stylesheet" type="text/css" href="paczka_style.css">
+    <link rel="stylesheet" type="text/css" href="../css/paczka_style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -22,12 +26,13 @@
           </label>
           <ul class="menu">
             <a href="Startowa.html">Home</a>
-            <a href="Paczka.html">PACZKA</a>
+            <a href="Paczka.php">PACZKA</a>
             <a href="#">ŚLEDZENIE</a>
             <a href="#">KURIER</a>
             <a href="#">NADAJ PACZKĘ</a>
             <a href="logowanie.html">ZALOGUJ</a>
             <a href="rejestracja.html">ZAREJSTRUJ</a>
+            <a href="../logout.php">Wyloguj</a>
             <label for="chk" class="hide-menu-btn">
               <i class="fas fa-times"></i>
             </label>
@@ -46,21 +51,21 @@
   <div class="col-4 div1 rounded">
       <label>
         <input type="radio" name="w1" id="c1" value="1">
-        <img class="rounded" src="images/list.jpg"  height="150" width="150">
+        <img class="rounded" src="../images/list.jpg"  height="150" width="150">
       </label>
     </div>
 
     <div class="col-4 div2 rounded">
       <label>
         <input type="radio" name="w1" id="c2" value="2">
-        <img  class="rounded" src="images/paczka.jpg" height="150" width="150">
+        <img  class="rounded" src="../images/paczka.jpg" height="150" width="150">
       </label>
     </div>
 
     <div class="col-4 div3 rounded">
       <label>
         <input type="radio" name="w1" id="c3" value="3">
-        <img class="rounded" src="images/paleta.jpg" height="150" width="150">
+        <img class="rounded" src="../images/paleta.jpg" height="150" width="150">
       </label>
     </div>
 

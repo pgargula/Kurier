@@ -15,7 +15,7 @@ $_POST['password']=$_POST['password'].$salt;
 $hash=sha1($_POST['password']);
 
     mysqli_query($link, "insert into UZYTKOWNICY (LOGIN, HASLO, EMAIL, SALT, TYP) values ('$_POST[login]','$hash','$_POST[login]','$salt',1);");
-    header('Location: logowanie.php');
+    header('Location: views/logowanie.html');
 }
     
     
