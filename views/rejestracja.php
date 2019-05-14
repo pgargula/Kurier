@@ -1,41 +1,35 @@
+<?php
+
+include'../php/session.php';
+?>
+
 <html>
     <head>
         <meta charset="utf-8">
         <title>Rejestracja 4G</title>
-        <link rel="stylesheet" type="text/css" href="../css/logowanie_style.css">      
+        <link rel="stylesheet" type="text/css" href="../style/logowanie_style.css">  
+        <script type="text/javascript" src="../js/menu.js"></script>    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
  
     </head>
 <html>    
     <body>
           
-            <div class="header">
-                    <h2 class="logo"> KURIER4G</h2>
-                      <input type="checkbox" id="chk">
-                      <label for="chk" class="show-menu-btn">
-                        <i class="fas fa-ellipsis-h"></i>
-                      </label>
-                      <ul class="menu">
-                        <a href="Startowa.html">Home</a>
-                        <a href="Paczka.php">PACZKA</a>
-                        <a href="#">ŚLEDZENIE</a>
-                        <a href="#">KURIER</a>
-                        <a href="#">NADAJ PACZKĘ</a>
-                        <a href="logowanie.html">ZALOGUJ</a>
-                        <a href="rejestracja.html">ZAREJSTRUJ</a>
-                        <label for="chk" class="hide-menu-btn">
-                          <i class="fas fa-times"></i>
-                        </label>
-                      </ul>
-                    </div>
+    <?php 
+            if(!isset($_SESSION["zalogowany"]))
+            include('navbarNotLog.html');
+            else
+            include('navbarLog.html');
+            ?>
         <div class="box">
             <h2>Rejestracja</h2>
-            <form method="POST" action="../rejestracja.php">
+            <form method="POST" action="../php/rejestracja.php">
                     <div class="inputBox">
                             <input type="text" name="login" required="">
                             <label>Login</label>

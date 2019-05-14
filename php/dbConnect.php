@@ -2,7 +2,7 @@
 <?php
 
 try {
-    $link = mysqli_connect("sql7.freesqldatabase.com", "sql7290219", "xP4hvDw2Y1", "sql7290219") or die(mysqli_connect_error());
+    $link = mysqli_connect("remotemysql.com", "fuoFBL91SK", "YyNr1eByd3", "fuoFBL91SK") or die(mysqli_connect_error());
   } 
 catch (Exception $e) {
   

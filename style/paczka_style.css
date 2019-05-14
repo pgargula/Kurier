@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(../images/tlo.jpg);
+    background-size: cover;
+}
+#stopka{
+    position: absolute;
+    width: 100%;
+ bottom:100%;
+  
+  }
+
+.div1{
+    background-image: linear-gradient(black, grey, red);
+    height: 200px;
+    padding: 5px;
+    margin: 15px;
+}
+
+.div2{
+    background-image: linear-gradient(black, grey, blue);
+    height: 200px;
+    padding: 5px;
+    margin: 15px;   
+}
+.div3{
+  background-image: linear-gradient(black, grey, rgb(0, 255, 0));
+  height: 200px;
+  padding: 5px;
+  margin: 15px;
+}
+
+
+.div1 img{
+  height: 150px;
+  position: absolute;
+  right: 20%;
+  padding-bottom: 10px;
+}
+.div2 img{
+  height: 150px;
+  position: absolute;
+  right: 20%;
+  padding-bottom: 10px;
+}
+.div3 img{
+  height: 150px;
+  position: absolute;
+  right: 20%;
+  padding-bottom: 10px;
+}
+
+.div1 input{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 87%;
+    left: 45%;
+}
+.div2 input{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 87%;
+    left: 45%;
+}
+.div3 input{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 87%;
+    left: 45%;
+}
+
+
+
+body{
+    background-color: rgb(70, 61, 61) !important;
+ }
+
+h5{
+  color: red;
+}
+h3{
+  color:#1779ff ;
+}
+
+.box {
+    position: absolute;
+    top: 120px;
+    transform: translate(-50%, 0);
+    left: 50%;
+    padding-bottom:30px;
+    margin-bottom:30px;
+    width: 900px;
+    padding: 40px;
+    background: rgba(0,0,0,.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;
+}
+.box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    color: darkseagreen;
+    text-align: center;
+}
+
+.box .inputBox {
+    position: relative;
+}
+
+.box .inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s; 
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+
+.box input[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+a span:nth-child(1)
+{
+    position: absolute;
+    top: 1;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #0c002b,  #1779ff,  #0c002b);
+ }
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+  }
+  .header{
+    height: 100px;
+    background: #34495e;
+    padding: 0 20px;
+    color: #fff;
+  }
+  .logo{
+    line-height: 100px;
+    float: left;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .menu{
+    float: right;
+    line-height: 100px;
+  }
+  .menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+  }
+  .show-menu-btn,.hide-menu-btn{
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  .show-menu-btn{
+    float: right;
+  }
+  .show-menu-btn i{
+    line-height: 100px;
+  }
+  .menu a:hover,
+  .show-menu-btn:hover,
+  .hide-menu-btn:hover{
+    color: #3498db;
+  }
+  
+  #chk{
+    position: fixed;
+    visibility: hidden;
+    z-index: -1111;
+  } 
+  .content{
+    padding: 0 20px;
+  }
+  .content img{
+    width: 100%;
+    max-width: 200px;
+    margin: 20px 0;
+  }
+  .content p{
+    text-align: justify;
+  }
+  
+  @media screen and (max-width:992px) {
+    .show-menu-btn,.hide-menu-btn{
+      display: inline;
+    }
+    .menu{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #333;
+      right: -100%;
+      top: 0;
+      text-align: center;
+      padding: 80px 0;
+      line-height: normal;
+      transition: 0.7s;
+    }
+    .menu a{
+      display: block;
+      padding: 20px;
+    }
+    .hide-menu-btn{
+      position: absolute;
+      top: 40px;
+      right: 40px;
+    }
+    #chk:checked ~ .menu{
+      right: 0;
+    }   
+.box {
+    width: 600px;
+}   
+.div1 img{
+ height: 115px;
+width: 115px;
+ position: absolute;
+ left: 12%;
+  }
+.div2 img{
+height: 115px;
+width: 115px;
+ position: absolute;
+ left: 12%;
+  }
+.div3 img{
+height: 115px;
+width: 115px;
+ position: absolute;
+ left: 12%;
+  }
+.div1{
+    height: 150px;
+  }
+.div2{
+    height: 150px;
+  }
+.div3{
+    height: 150px;
+  }
+.div1 input{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 85%;
+    left: 45%;
+}
+.div2 input{
+   height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 85%;
+    left: 45%;
+}
+.div3 input{
+     height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 85%;
+    left: 45%;
+}
+}
+@media screen and (max-width:630px) {
+.box {
+    width: 400px;
+}   
+.div1 img{
+ height: 60px;
+width: 60px;
+ position: absolute;
+ left: 15%;
+  }
+.div2 img{
+  height: 60px;
+width: 60px;
+ position: absolute;
+ left: 15%;
+  }
+.div3 img{
+  height: 60px;
+width: 60px;
+ position: absolute;
+ left: 15%;
+  }
+.div1{
+    height: 100px;
+  }
+.div2{
+    height: 100px;
+  }
+.div3{
+    height: 100px;
+  }
+.div1 input{
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    top: 77%;
+    left: 45%;
+}
+.div2 input{
+   height: 5px;
+    width: 5px;
+    position: absolute;
+    top: 77%;
+    left: 45%;
+}
+.div3 input{
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    top: 77%;
+    left: 45%;
+}
+
+}
+
+#wys{
+  padding: 5px;
+  margin-bottom: 20px;
+}
+#dlug{
+  padding: 5px;
+  margin-bottom: 20px;
+}
+#szer{
+  padding: 5px;
+  margin-bottom: 20px;
+}
+#wcena{
+  padding: 5px;
+  margin-bottom: 20px;
+}

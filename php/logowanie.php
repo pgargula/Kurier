@@ -36,7 +36,7 @@ include'dbConnect.php';
       $_SESSION['ID']=htmlspecialchars($tabU['ID_UZYTKOWNIK']);
       $_SESSION['typ']=$tabU['TYP'];
       
-      header('Location: views/paczka.php');
+      header('Location: ../views/Startowa.php');
       
       }
     }

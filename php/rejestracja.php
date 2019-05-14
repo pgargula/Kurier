@@ -14,8 +14,11 @@ $salt = uniqid();
 $_POST['password']=$_POST['password'].$salt;
 $hash=sha1($_POST['password']);
 
+
+$hash;
+
     mysqli_query($link, "insert into UZYTKOWNICY (LOGIN, HASLO, EMAIL, SALT, TYP) values ('$_POST[login]','$hash','$_POST[login]','$salt',1);");
-    header('Location: views/logowanie.html');
+    header('Location: ../views/logowanie.php');
 }
     
     
