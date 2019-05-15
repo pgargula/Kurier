@@ -1,6 +1,7 @@
 <?php
 
 include'../php/session.php';
+include'../php/sessionrequire.php';
 ?>
 
 <html>
@@ -29,41 +30,41 @@ include'../php/session.php';
         <div id="pud"  class="box">
                 <h2>Nadaj przesylke</h2>
                 <h3>Adres nadawcy</h3>
-                <form>
+                <form  method="POST"  action="../php/nadawanie.php" id="form" name="form">
                     <div class="inputBox">
-                        <input type="text" name="" required="">
+                        <input type="text" name="miastoNad" required="">
                         <label>Miasto</label>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="" required="">
+                        <input type="text" name="ulicaNad" required="">
                         <label>Ulica</label>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="" required="">
+                        <input type="text" name="mieszkanieNad" required="">
                         <label>Nr. mieszkania</label>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="" required="">
+                        <input type="text" name="kodNad" required="">
                         <label>Kod pocztowy</label>
                     </div>
                     <h3>Adres odbiorcy</h3>
                     <div class="inputBox">
-                        <input type="text" name="" required="">
+                        <input type="text" name="miastoOdb" required="">
                         <label>Miasto</label>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="" required="">
+                        <input type="text" name="ulicaOdb" required="">
                         <label>Ulica</label>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="" required="">
+                        <input type="text" name="mieszkanieOdb" required="">
                         <label>Nr. mieszkania</label>
                     </div>
                     <div class="inputBox">
-                        <input type="text" name="" required="">
+                        <input type="text" name="kodOdb" required="">
                         <label>Kod pocztowy</label>
                     </div>
-                    <input type="submit" name="" value="submit">
+                    <button type="submit" class="btn btn-success" name="nadaj">Zamów</button>
                 </form>
        </div>
    </body>

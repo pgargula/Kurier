@@ -32,6 +32,8 @@ include'../php/session.php';
             else
             include('navbarLog.html');
             ?>
+
+    <form method="POST"  action="../php/paczka.php" id="form" name="form">
     <div id="pud" class="box">
         <div>
             <h2>Wybierz rodzaj przesyłki</h2>
@@ -42,19 +44,19 @@ include'../php/session.php';
             <div class="col div1 rounded" id="d1">
                 <label>
                     <input type="radio" name="w1" id="c1" value="1" checked>
-                    <img class="rounded" src="../views/list.jpg"  height="150" width="150">
+                    <img class="rounded" src="../images/list.jpg"  height="150" width="150">
                 </label>
             </div>
             <div class="col div2 rounded" id="d2">
                 <label>
                     <input type="radio" name="w1" id="c2" value="2">
-                    <img  class="rounded" src="../views/paczka.jpg" height="150" width="150">
+                    <img  class="rounded" src="../images/paczka.jpg" height="150" width="150">
                 </label>
             </div>
             <div class="col div3 rounded" id="d3">
                 <label>
                     <input type="radio" name="w1" id="c3" value="3">
-                    <img class="rounded" src="../views/" height="150" width="150">
+                    <img class="rounded" src="../images/paleta.jpg" height="150" width="150">
                 </label>
             </div>
         </div>
@@ -64,26 +66,41 @@ include'../php/session.php';
             <h2>Podaj wymiary przesyłki</h2>
         </div>
         <div class="inputBox" oninput="spW()">
-            <input type="number"  id="wysokosc" name="" required=""/>
+            <input type="number"  id="wysokosc" name="wysokosc" required=""/>
             <label>Wysokość</label>
         </div>
             <div id="wys"></div>
         <div class="inputBox" oninput="spD()">
-            <input type="number"  id="dlugosc"  name="" required=""/>
+            <input type="number"  id="dlugosc"  name="dlugosc" required=""/>
             <label>Długość</label>
         </div>
             <div id="dlug"></div>
         <div class="inputBox" oninput="spS()">
-            <input type="number"  id="szerokosc" name="" required=""/>
+            <input type="number"  id="szerokosc" name="szerokosc" required=""/>
             <label>Szerokość</label>
         </div>
             <div id="szer"></div>  
-        <div class="inputBox oninput="spWa()">
-            <input type="number"  id="waga"  name="" required=""/>
+        <div class="inputBox" oninput="spWa()">
+        <input type="hidden"  id="cena3" name="cena3" ><!-- ukryty input aby wyslac cene -->
+            <input type="number"  id="waga"  name="waga" required=""/>
+            
             <label>Waga</label>
         </div>
             <div  id="wag"></div>
-        <div id="cena"></div>   
+        <div class="mine" id="cena" name="cena">
+       
+        </div>   
+        <?php
+        
+        if(isset($_SESSION["zalogowany"]))
+       echo' <button type="submit" class="btn btn-success" name="zamow">Zamów</button> ';
+
+        ?>
     </div>
+
+  
+</form>
+
+
 </body>
 </html>

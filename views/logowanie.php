@@ -1,6 +1,7 @@
 <?php
 
-	include'../php/session.php';
+  include'../php/session.php';
+  include'../php/sessionden.php';
 ?>
 <html>
 

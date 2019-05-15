@@ -89,13 +89,18 @@ function cena(){
         if(waga>50 && waga<=75) {zdjecie='dpd.jpg';cena3=" 44.99";}
         break;
     }
-  var cena1='<h6>.</h6><a href="#"><span></span></a><div><h2>Najtansza oferta</h2></div><div class="row"><div class="col-md-4"><img class="rounded" src="./zdj/'+zdjecie+'" height="150" width="150"></div><div class="col-md-8"><h3>cena='+cena3+'zl</h3></div></div>';
+  var cena1='<h6>.</h6><a href="#"><span></span></a><div><h2>Najtansza oferta</h2></div><div class="row"><div class="col-md-4"><img class="rounded" src="../images/'+zdjecie+'" height="150" width="150"></div><div class="col-md-8"><h3>cena='+cena3+'zl</h3></div></div>';
   var napis=cena1;
     document.getElementById("cena").innerHTML=(napis);
+    document.getElementById("cena3").innerHTML=(cena3);
+    document.form.cena3.value =cena3;
   }
   else{
     document.getElementById("cena").innerHTML=("");
+    document.form.cena3.value =cena3;
   }
-} 
+  
+ 
 
+} 
 
