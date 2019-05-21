@@ -17,7 +17,7 @@ $hash=sha1($_POST['password']);
 
 $hash;
 
-    mysqli_query($link, "insert into UZYTKOWNICY (LOGIN, HASLO, EMAIL, SALT, TYP) values ('$_POST[login]','$hash','$_POST[login]','$salt',1);");
+    mysqli_query($link, "insert into UZYTKOWNICY (LOGIN, HASLO, EMAIL, SALT, TYP) values ('$_POST[login]','$hash','$_POST[email]','$salt',1);");
     header('Location: ../views/logowanie.php');
 }
     

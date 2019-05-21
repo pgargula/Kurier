@@ -21,7 +21,10 @@ $id_odb= mysqli_insert_id($link);
 
 $id_paczka=$_SESSION["ID_PACZ"];
 $id=$_SESSION["ID"];
+$nrpaczki = uniqid();
+$nrpaczki=$nrpaczki.$id_paczka;
+$stan=1;
 
-mysqli_query($link, "insert into TRANSAKCJE (ID_UZYTKOWNIK, ID_ADRES_NAD, ID_ADRES_ODB, ID_PRZESYLKA) values ('$id','$id_nad','$id_odb','$id_paczka');");
+mysqli_query($link, "insert into TRANSAKCJE (ID_UZYTKOWNIK, ID_ADRES_NAD, ID_ADRES_ODB, ID_PRZESYLKA, STAN, NR_PACZKI) values ('$id','$id_nad','$id_odb','$id_paczka','$stan','$nrpaczki');");
 header("Location: ../views/Startowa.php");
 ?>

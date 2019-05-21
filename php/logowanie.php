@@ -37,11 +37,27 @@ include'dbConnect.php';
       $_SESSION['typ']=$tabU['TYP'];
       
       header('Location: ../views/Startowa.php');
+         }
+      }
+
+      //sprawdzenie czy uzytkownik jest kurierem
+      if($hash==$tabU['HASLO'])
+      {
+         if ($tabU['TYP']==2){
+         
+        
+         echo $_POST['login'];
+      $_SESSION['zalogowany'] = true;
+      $_SESSION['login'] = $_POST['login'];
+      $_SESSION['ID']=htmlspecialchars($tabU['ID_UZYTKOWNIK']);
+      $_SESSION['typ']=$tabU['TYP'];
+      
+      header('Location: ../views/PanelKuriera.php');
       
       }
-    }
+    
    
-   
+      }
    
    
    
