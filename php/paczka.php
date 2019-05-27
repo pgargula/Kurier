@@ -16,7 +16,7 @@ if($_POST['w1']==2)
 $typ="paczka";
 if($_POST['w1']==3)
 $typ="paleta";
-mysqli_query($link, "insert into PRZESYLKA (WYSOKOSC, DLUGOSC, SZEROKOSC, CENA, TYP) values ('$_POST[wysokosc]','$_POST[dlugosc]','$_POST[szerokosc]','$_POST[cena3]','$typ');");
+mysqli_query($link, "insert into PRZESYLKA (WYSOKOSC, DLUGOSC, SZEROKOSC, CENA, TYP, WAGA) values ('$_POST[wysokosc]','$_POST[dlugosc]','$_POST[szerokosc]','$_POST[cena3]','$typ','$_POST[waga]');");
 $tmp = mysqli_insert_id($link);
 
 $_SESSION['ID_PACZ']= $tmp;

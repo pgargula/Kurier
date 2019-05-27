@@ -24,9 +24,9 @@ include'../php/sessionden.php';
           
     <?php 
             if(!isset($_SESSION["zalogowany"]))
-            include('navbarNotLog.html');
+            include('navbarNotLog.php');
             else
-            include('navbarLog.html');
+            include('navbarLog.php');
             ?>
         <div class="box">
             <h2>Rejestracja</h2>

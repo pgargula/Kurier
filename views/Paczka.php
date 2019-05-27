@@ -28,9 +28,9 @@ include'../php/session.php';
 <body onload="spRW()">
 <?php 
             if(!isset($_SESSION["zalogowany"]))
-            include('navbarNotLog.html');
+            include('navbarNotLog.php');
             else
-            include('navbarLog.html');
+            include('navbarLog.php');
             ?>
 
     <form method="POST"  action="../php/paczka.php" id="form" name="form">

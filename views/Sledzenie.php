@@ -6,7 +6,7 @@ include'../php/session.php';
     <head>
         <meta charset="utf-8">
         <title>Sledzenie 4G</title>
-        <link rel="stylesheet" href="../style/logowanie_style.css">
+        <link rel="stylesheet" href="../style/paczka_style.css">
         <script type="text/javascript" src="../js/menu.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
@@ -21,16 +21,40 @@ include'../php/session.php';
     <body>
     <?php 
             if(!isset($_SESSION["zalogowany"]))
-            include('navbarNotLog.html');
+            include('navbarNotLog.php');
             else
-            include('navbarLog.html');
+            include('navbarLog.php');
             ?>
-        <div id="pud"  class="box">
+        <div   class="box">
             <h2>Sledzenie</h2>
-                <form>
+                <form  method="post">
                     <div class="inputBox">
-                        <input type="number" name="" required="">
-                        <label>Numer przesylki (12cyfr)</label>
+                        <input  name="nrprzesylki" required="">
+                        <label>Numer przesylki </label>
                     </div>
-                    <input type="submit" name="" value="submit">
+                    <input type="submit" name="sprawdz" value="submit">
+
+                
                 </form>
+                <?php
+                
+                if(isset($_POST['sprawdz']))
+                {   include("../php/dbConnect.php");
+                    
+                    $query=mysqli_query($link,"SELECT ID_TRANSAKCJE, STAN FROM TRANSAKCJE WHERE NR_PACZKI='$_POST[nrprzesylki]';");
+                        while ($tabnad= mysqli_fetch_assoc($query)){
+                       $_SESSION['id_transakcji']=$tabnad['ID_TRANSAKCJE'];
+                        echo" <h2>Status</h2>";
+                        if($tabnad['STAN']==1)
+                            {echo "<div class=\"alert alert-info\" role=\"alert\">W oczekiwaniu</div>";}
+                        if($tabnad['STAN']==2)
+                            {echo "<div class=\"alert alert-info\" role=\"alert\">Odebrana przez kuriera</div>";}
+                        if($tabnad['STAN']==3)
+                            {echo "<div class=\"alert alert-warning\" role=\"alert\">W drodze</div>";}
+                        if($tabnad['STAN']==4)
+                            {echo "<div class=\"alert alert-success\" role=\"alert\">Dostarczona</div>";}
+                            }
+                include('szczegoly.php');
+                }
+                ?>
+                </div>

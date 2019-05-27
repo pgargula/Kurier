@@ -23,9 +23,9 @@
     <body>
             <?php 
             if(!isset($_SESSION["zalogowany"]))
-            include('navbarNotLog.html');
+            include('navbarNotLog.php');
             else
-            include('navbarLog.html');
+            include('navbarLog.php');
             ?>
         <div class="box">
             <form method="POST" action="../php/logowanie.php">

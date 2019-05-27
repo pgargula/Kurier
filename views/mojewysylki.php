@@ -1,7 +1,7 @@
 <?php
 
 include'../php/session.php';
-if($_SESSION["typ"]!=2)
+if($_SESSION["typ"]!=1)
     {
     header("location:Startowa.php");}
 include'../php/dbConnect.php';
@@ -35,8 +35,25 @@ include'../php/dbConnect.php';
             include('navbarLog.php');
            
             ?>
+
+
+
+
+
+
+
        <form method="post"  class="row justify-content-md-center ">
         <div class="box" >
+
+        
+        <?php
+
+if (isset($_GET['id'])){
+    $_SESSION['id_transakcji']= $_GET['id'];   
+include('../views/szczegoly.php');    
+}
+        ?>
+        
             
             <table id="example" class="display" style="width:100%">
         <thead>
@@ -46,12 +63,12 @@ include'../php/dbConnect.php';
                 <th>Typ</th>
                 <th>Cena</th>
                 <th>Akcja</th>
-                <th></th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
         <?php
-include('../php/PanelKuriera.php')
+include('../php/mojewysylki.php')
 ?>           
             </tbody>
         <tfoot>
@@ -62,7 +79,7 @@ include('../php/PanelKuriera.php')
                 <th>Typ</th>
                 <th>Cena</th>
                 <th>Akcja</th>
-                <th></th>
+                <th>Status</th>
         
             </tr>
         </tfoot>
@@ -75,6 +92,14 @@ include('../php/PanelKuriera.php')
 $(document).ready(function() {
     $('#example').DataTable();
 } );
+
+
+
+
+
+ 
+
+
 </script>
 
 </body>

@@ -23,9 +23,9 @@ include'../php/sessionrequire.php';
     <body>
     <?php 
             if(!isset($_SESSION["zalogowany"]))
-            include('navbarNotLog.html');
+            include('navbarNotLog.php');
             else
-            include('navbarLog.html');
+            include('navbarLog.php');
             ?>
         <div id="pud"  class="box">
                 <h2>Nadaj przesylke</h2>

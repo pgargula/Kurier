@@ -9,9 +9,11 @@
         <a href="../views/Paczka.php">PACZKA</a>
         <a href="../views/Sledzenie.php">ŚLEDZENIE</a>
         <a href="../views/kurier.php">KURIER</a>
-        <a href="../views/nadawanie.php">NADAJ PACZKĘ</a>
+        <a href="../views/mojewysylki.php">MOJE WYSYŁKI</a>
         <a href="../php/logout.php">WYLOGUJ</a>
-        
+        <span class="navbar-text">
+          WITAJ: <?php echo $_SESSION['login'];?>
+        </span>
         <label for="chk" class="hide-menu-btn">
           <i class="fas fa-times"></i>
         </label>
