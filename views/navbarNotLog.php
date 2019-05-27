@@ -8,8 +8,6 @@
         <a href="../views/Startowa.php">Home</a>
         <a href="../views/Paczka.php">PACZKA</a>
         <a href="../views/Sledzenie.php">ŚLEDZENIE</a>
-        <a href="../views/kurier.php">KURIER</a>
-        <a href="../views/nadawanie.php">NADAJ PACZKĘ</a>
         <a href="../views/logowanie.php">ZALOGUJ</a>
         <a href="../views/rejestracja.php">ZAREJSTRUJ</a>
         <label for="chk" class="hide-menu-btn">

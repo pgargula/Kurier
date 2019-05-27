@@ -6,9 +6,9 @@
       </label>
       <ul class="menu">
         <a href="../views/Startowa.php">Home</a>
-        <a href="../views/Paczka.php">PACZKA</a>
         <a href="../views/Sledzenie.php">ŚLEDZENIE</a>
-        <a href="../views/mojewysylki.php">MOJE WYSYŁKI</a>
+        <a href="../views/PanelKuriera.php">DOSTEPNE PRZESYLKI</a>
+        <a href="../views/mojepaczkiKurier.php">MOJE PACZKI</a>
         <a href="../php/logout.php">WYLOGUJ</a>
         <span class="navbar-text">
           WITAJ: <?php echo $_SESSION['login'];?>

@@ -45,13 +45,14 @@ include'../php/dbConnect.php';
                 <th>Dokąd</th>
                 <th>Typ</th>
                 <th>Cena</th>
-                <th>Akcja</th>
-                <th></th>
+                <th>Szczegóły</th>
+                <th>Status</th>
+                <th>Zmien Status</th>
             </tr>
         </thead>
         <tbody>
         <?php
-include('../php/PanelKuriera.php')
+include('../php/mojepaczkiKurier.php')
 ?>           
             </tbody>
         <tfoot>
@@ -61,8 +62,9 @@ include('../php/PanelKuriera.php')
                 <th>Dokąd</th>
                 <th>Typ</th>
                 <th>Cena</th>
-                <th>Akcja</th>
-                <th></th>
+                <th>Szczegóły</th>
+                <th>Status</th>
+                <th>Zmien Status</th>
         
             </tr>
         </tfoot>

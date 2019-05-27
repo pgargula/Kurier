@@ -1,11 +1,11 @@
 <?php
 include("dbConnect.php");
 
-$login="kurier";
+$login="kurier_Maciej";
 $email="kurier@gmail.com";
 
 $salt = uniqid();
-$passwd="kurier";
+$passwd="kurier_Maciej";
 $passwd=$passwd.$salt;
 $hash=sha1($passwd);
 

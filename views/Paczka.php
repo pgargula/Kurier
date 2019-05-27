@@ -30,7 +30,12 @@ include'../php/session.php';
             if(!isset($_SESSION["zalogowany"]))
             include('navbarNotLog.php');
             else
-            include('navbarLog.php');
+            {
+                if($_SESSION["typ"]==2)
+                    include('navbarKur.php');
+                else
+                    include('navbarLog.php');
+            }
             ?>
 
     <form method="POST"  action="../php/paczka.php" id="form" name="form">

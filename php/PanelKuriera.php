@@ -1,13 +1,15 @@
 <?php
-/*
+
 if (isset($_GET['id'])){
     
     
+   $_SESSION['id_transakcji']= $_GET['id'];   
+    include('../views/szczegoly.php');   
    
     
    
     
-}*/
+}
 
 if (isset($_GET['idT'])){
     $idkurier=$_SESSION["ID"];

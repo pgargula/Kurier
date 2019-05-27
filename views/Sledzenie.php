@@ -23,7 +23,12 @@ include'../php/session.php';
             if(!isset($_SESSION["zalogowany"]))
             include('navbarNotLog.php');
             else
-            include('navbarLog.php');
+            {
+                if($_SESSION["typ"]==2)
+                    include('navbarKur.php');
+                else
+                    include('navbarLog.php');
+            }
             ?>
         <div   class="box">
             <h2>Sledzenie</h2>
@@ -39,22 +44,9 @@ include'../php/session.php';
                 <?php
                 
                 if(isset($_POST['sprawdz']))
-                {   include("../php/dbConnect.php");
+                { 
+                    include("../php/sledzenie.php");
                     
-                    $query=mysqli_query($link,"SELECT ID_TRANSAKCJE, STAN FROM TRANSAKCJE WHERE NR_PACZKI='$_POST[nrprzesylki]';");
-                        while ($tabnad= mysqli_fetch_assoc($query)){
-                       $_SESSION['id_transakcji']=$tabnad['ID_TRANSAKCJE'];
-                        echo" <h2>Status</h2>";
-                        if($tabnad['STAN']==1)
-                            {echo "<div class=\"alert alert-info\" role=\"alert\">W oczekiwaniu</div>";}
-                        if($tabnad['STAN']==2)
-                            {echo "<div class=\"alert alert-info\" role=\"alert\">Odebrana przez kuriera</div>";}
-                        if($tabnad['STAN']==3)
-                            {echo "<div class=\"alert alert-warning\" role=\"alert\">W drodze</div>";}
-                        if($tabnad['STAN']==4)
-                            {echo "<div class=\"alert alert-success\" role=\"alert\">Dostarczona</div>";}
-                            }
-                include('szczegoly.php');
                 }
                 ?>
                 </div>

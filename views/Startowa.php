@@ -20,7 +20,12 @@ include'../php/session.php';
             if(!isset($_SESSION["zalogowany"]))
             include('navbarNotLog.php');
             else
-            include('navbarLog.php');
+            {
+                if($_SESSION["typ"]==2)
+                    include('navbarKur.php');
+                else
+                    include('navbarLog.php');
+            }
             ?>
   <section></section>
   <script  src="http://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="></script>
