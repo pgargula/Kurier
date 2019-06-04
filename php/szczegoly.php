@@ -1,5 +1,6 @@
 <?php
 include('dbConnect.php');
+include('../php/session.php');
 $id_transakcji=$_SESSION['id_transakcji'];
 
 

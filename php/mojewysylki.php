@@ -1,5 +1,5 @@
 <?php
-
+include('../php/session.php');
 /*if (isset($_GET['id'])){
     
     
@@ -38,6 +38,8 @@ while ($tabl = mysqli_fetch_assoc($q)){
    
     echo "<tr><td>$tabl[MIASTONAD]</td><td>$tabl[MIASTOODB]</td><td>$tabl[TYP]</td><td>$tabl[CENA]</td>
     <td><a class=\"btn btn-danger \"  href='?id=$tabl[ID_TRANSAKCJE]'>SZCZEGÓŁY</a></td><td>";
+    if($tabl['STAN']==1)
+{echo"<div class=\"alert alert-secondary\" role=\"alert\">w oczekiwaniu</div></td>";}
     if($tabl['STAN']==2)
 {echo"<div class=\"alert alert-info\" role=\"alert\">odebrana przez kuriera</div></td>";}
     if($tabl['STAN']==3)

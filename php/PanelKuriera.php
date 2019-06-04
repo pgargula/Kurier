@@ -1,5 +1,5 @@
 <?php
-
+include('../php/session.php');
 if (isset($_GET['id'])){
     
     

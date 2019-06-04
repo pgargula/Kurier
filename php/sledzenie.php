@@ -1,5 +1,5 @@
 <?php
-
+include('../php/session.php');
 include("../php/dbConnect.php");
                     
 $query=mysqli_query($link,"SELECT ID_TRANSAKCJE, STAN FROM TRANSAKCJE WHERE NR_PACZKI='$_POST[nrprzesylki]';");

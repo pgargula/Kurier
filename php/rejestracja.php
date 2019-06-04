@@ -1,7 +1,7 @@
 <?php
   
   include'dbconnect.php';
-  
+  include('../php/session.php');
 
 if (isset($_POST['rejestruj'])){
     $_POST['email'] = mysqli_real_escape_string($link, $_POST['email']);
